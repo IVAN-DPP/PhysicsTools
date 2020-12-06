@@ -1,7 +1,5 @@
     
-* {
-    font-family: arial;
-}
+* {font-family: arial;}
     
 body {
     background-color: rgba(0,0,0,100%);
@@ -10,6 +8,7 @@ body {
     background-repeat: no-repeat;
     box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.3);   /* Marca de agua */
     margin: 0;
+    background-attachment: fixed;
 }
 
     
@@ -30,7 +29,7 @@ nav .home:hover {
     background-color: rgba(0,0,0,0);
     color: white;
     padding: 16px;
-    font-size: 16px;
+    font-size: 40px;
     border: none;
 }
 
@@ -70,17 +69,18 @@ nav .home:hover {
     border-radius: 10px;
     }
 
+
     /*---------- TitleTexts ----------*/
 
 .titletext {
     color: white;
-    font-size: 50px;
+    font-size: 100px;
     text-align: center;
 }
 
 .titletext2 {
     color: white;
-    font-size: 20px;
+    font-size: 50px;
     text-align: center;
     margin: 0;
 }
@@ -89,23 +89,27 @@ nav .home:hover {
     width: 30%;
     margin: 0 34%;
 }
+
 /*------ Page's Description ---------*/
 
 div .cppinf , .pyinf , .gnuinf {
     padding: 0% 2%;
     padding-top: 1.5%;
     padding-bottom: 1.7%;
-    width: 50%;
+    width: 60%;
     text-align: center;
     color: white;
     background-color: rgba(255,255,255,4%);
-    border-radius: 10px;
+    border-radius: 20px;
     transition: transform .2s;
 }
 
-div .cpp, .py, .gnu {width: 50%;}
+div p {
+    font-size: 40px;
+}
+div .cpp, .py, .gnu {width: 40%;}
 
-div .cppinf {margin: 0% auto 20%;}
+div .cppinf {margin: 0% auto 10%;}
 
 div .pyinf {margin: 0% auto 20%;}
 
@@ -115,51 +119,83 @@ div .cppinf:hover, .pyinf:hover, .gnuinf:hover {transform: scale(1.1);}
 /*------ FOOTER ------ */
 
 footer {
-    margin-top: 300px;
+    margin-top: 50px;
     clear: both;
     text-align: center;
-    background-color: rgba(0,0,0,80%);
+    background-color: black;
+    color: white;
+    font-size: 170px;
 }
 
 
 
+@media only screen and (min-device-width: 768px){
 
-/*************** Ipad size ***************/
+    .titletext {font-size: 50px;}
 
-@media only screen and (min-width: 768px) {
+    .titletext2 {
+	font-size: 40px;
+	padding-left: 40px;
+	padding-right: 40px;
+    }
+
+    .devbtn , .home {
+	font-size: 20px;
+    }
+
+}
+
+@media only screen and (min-device-width: 1200px){
     
     .titletext {font-size: 50px;}
-    
-    .titletext2 {font-size: 20px;}
-    
-    /*------ Page's Description ---------*/
-    
-    div .cppinf , .pyinf , .gnuinf {
-	width: 25%;
-	float: left;	
+    .titletext2 {
+	font-size: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
     }
     
+    div p {font-size: 17px;}
+
+    div .cppinf , .pyinf , .gnuinf {
+	padding: 0% 2%;
+	padding-top: 1.5%;
+	padding-bottom: 1.7%;
+	width: 25%;
+	float: left;
+	text-align: center;
+	color: white;
+	background-color: rgba(255,255,255,4%);
+	border-radius: 10px;
+	transition: transform .2s;
+    }
+
     div .cpp, .py, .gnu {width: 30%;}
-    
+
     div .cppinf {margin: 0% 2%;}
-    
+
     div .pyinf {
 	margin: 0% 2%;
 	padding-top: 30px ;
 	padding-bottom: 65px;
     }
-    
+
     div .gnuinf {
 	margin: 0% 1%;
 	padding-top: 30px ;
 	padding-bottom: 50px;
-    }  
+    }
+
+    div .cppinf:hover, .pyinf:hover, .gnuinf:hover {transform: scale(1.1);}
+
+    /*------ FOOTER ------ */
+
+    footer {
+	margin-top: 50px;
+	clear: both;
+	text-align: center;
+	background-color: rgba(0,0,0,80%);
+    }
 
 }
 
-/************* Laptop size ************/
 
-@media only screen and (min-width: 1000px) {
-    
-
-}
